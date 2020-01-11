@@ -43,9 +43,15 @@ public class ProductTest extends ProductPO{
 		Thread.sleep(5000);
 		String price2 = driver.findElement(By.xpath(ProductPO.FLK_PRODUCT_PRICE)).getText();
 		
-		//if((int)price1> (int)price2) {
-			
-		//}
+		int num1 = Integer.parseInt(price1);
+		int num2 = Integer.parseInt(price2);
+		
+		if(num1 > num2) {
+			System.out.println("Amazon price is higher than Flipkart.");	
+		}else
+		{
+			System.out.println("FlipKart price is higher than Amazon.");
+		}
 				
 	}
 
